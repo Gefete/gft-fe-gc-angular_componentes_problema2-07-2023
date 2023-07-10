@@ -1,0 +1,12 @@
+<div *ngIf="contact != undefined || contact != null" class="container justify-content-center text-center">
+    <h3 >
+        Contacto recibido
+    </h3>
+    <span>
+        Nombre y apellido: {{contact.nombreapellido}}
+        <br>
+        Email de contacto: {{contact.email}}
+        <br>
+        Mensaje enviado: {{contact.message}}
+    </span>
+</div>
