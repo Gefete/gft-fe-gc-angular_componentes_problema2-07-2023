@@ -7,5 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class FormcontactComponent {
 
+  // Recibe los datos del componente padre
   @Input() contact:any;
 }

@@ -1,7 +1,9 @@
+<!-- Condicional que comprueba que tenga datos la variable marcada para poder mostrarse -->
 <div *ngIf="contact != undefined || contact != null" class="container justify-content-center text-center">
     <h3 >
         Contacto recibido
     </h3>
+    <!-- Muestra los datos del objeto pasado desde el padre -->
     <span>
         Nombre y apellido: {{contact.nombreapellido}}
         <br>

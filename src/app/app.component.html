@@ -6,6 +6,7 @@
         <label for="nombreapellido" class="col-sm-2 col-form-label">Nombre</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" id="nombreapellido" placeholder="Nombre y apellidos" [(ngModel)]="nombreapellido">
+          <!-- este texto solo aparece en caso de datos erronios o vacios -->
           <p class="text-start red_indicator">{{alertnombreapellido}}</p>
         </div>
       </div>
@@ -13,6 +14,7 @@
         <label for="email" class="col-sm-2 col-form-label">Email</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" id="email" placeholder="ejemplo@dominio.com" [(ngModel)]="email">
+          <!-- este texto solo aparece en caso de datos erronios o vacios -->
           <p class="text-start red_indicator">{{alertemail}}</p>
         </div>
       </div>
@@ -20,6 +22,7 @@
         <label for="message" class="col-sm-2 col-form-label">Mensaje</label>
         <div class="col-sm-10">
           <textarea class="form-control" id="message" rows="5" placeholder="" [(ngModel)]="message"></textarea>
+          <!-- este texto solo aparece en caso de datos erronios o vacios -->
           <p class="text-start red_indicator">{{alertmessage}}</p>
         </div>
       </div>
@@ -27,15 +30,17 @@
         <label for="respuesta" class="col-sm-2 col-form-label">2+3=?</label>
         <div class="col-sm-10">
           <input type="text" class="form-control" id="respuesta" placeholder="Respuesta" [(ngModel)]="respuesta">
+          <!-- este texto solo aparece en caso de datos erronios o vacios -->
           <p class="text-start red_indicator">{{alertrespuesta}}</p>
         </div>
       </div>
+      <!-- Boton que llama a un metodo para pasar los datos de los campos al siguiente componente (app-formcontact) -->
       <div>
-        <button (click)="generateContact()">enviar</button>
-      </div>
-      <!-- {{alertrespuesta}} -->
-   
+        <button class="btn btn-primary" (click)="generateContact()">enviar</button>
+      </div>   
   </div>
 </div>
+
+<!-- Se llama al componente y se envian datos por argumento -->
 <app-formcontact [contact]="contact"></app-formcontact>
 
